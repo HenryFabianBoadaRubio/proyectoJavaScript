@@ -4,48 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/png" href="/storage/img/spotify.png">
+    <link rel="stylesheet" href="css/style.css">
     <script src="./js/main.js" type="module" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <aside>
         <div class="titulo">
-            <h1>Discover New menu</h1>
-            <div class="buscar__1">
+            <h1>Discover <br> New menu</h1>
+            <div class="buscador__album" >
                 <i class='bx bx-search-alt-2'></i>
-                <input type="text" placeholder="Buscar...">
-                <button type="submit">Buscar</button>
+                <input class="buscador"  maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"class='bx bx-search-alt-2' placeholder="¿Qué quieres reproducir?" data-testid="search-input" data-encore-id="text" value="" style="color: rgb(0, 0, 0);">
             </div>
+            
         </div>
-      <section>
-        <div >
-            <h3>Top-chart</h3>
+
+      <section class="album__galeria">
+        <div class="album__total">
+            <div>
+                <h3>Top-chart</h3>
+            </div>
             <div>
                 <button>Week</button>
                 <i class='bx bx-chevron-down'></i>
             </div>
         </div>
-      </section>
-      <section>
-        <div>
-            <h3>You may like</h3>
-        </div>
-        <div>
+        <div class="album__canciones">
             <div>
-                <img src="/storage/img/Blessd.jpg" alt="">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            
+        </div>
+        
+
+      </section>
+
+      <section class="album__total__youmay">
+        <div class="album__youmay">
+            <h3>You may like</h3>
+        </div>
+        <div class="canciones__youmay"> 
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RbCdwPPk5XUpTrxAvntGM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <!-- <div>
                 <h5>Canciones</h5>
                 <p>Descripcion remix</p>
             </div>
             <div>
                 <p>22:35</p>
                 <p>2001</p>
-            </div>
+            </div> -->
         </div>
 
       </section>
     </aside>
-    <my-frame uri="spotify:album:7ot6ebVthlYG3wXzLaZ5NF"></my-frame>
+    <main>
+        <div>
+            <!-- <my-frame uri="spotify:album:7ot6ebVthlYG3wXzLaZ5NF"></my-frame> -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7ot6ebVthlYG3wXzLaZ5NF?utm_source=generator&theme=0" width="350" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        </div>
+    </main>
+    <section>
+        <div>
+            <h1>Track list</h1>
+        </div>
+    </section>
 </body>
 </html>
