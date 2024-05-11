@@ -3,3 +3,125 @@
     padding: 0;
     margin: 0;
 }
+body{
+    
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    height: 99.7vh;
+    border: 1px solid red;
+    background-color: var(--color-primary);
+    font-family: sans-serif;
+    color: white;
+}
+.titulo{
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    color: white;
+    background-color: var(--color-tercer);
+    border-radius: 1rem;
+}
+.buscador__album{
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    /* border: 1px solid red; */
+    align-items: center;
+    
+    
+}
+.buscador__album i{
+    display: flex;
+    position: absolute;
+    left: 1rem;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.buscador{
+    background-color: #242424;
+    border: 0;
+    border-radius: 500px;
+    color: #fff !important;
+    height: 30px;
+    padding: 6px 36px;
+    text-overflow: ellipsis;
+    width: 70%;
+}
+
+.album__galeria{
+    padding: 0.5rem ;
+    border-radius: 1rem;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll; */
+    border: 1px solid red;
+    background-color: var(--color-tercer);
+
+
+}
+.album__total{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    background-color: var(--color-tercer);
+}
+
+.album__canciones::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+    
+  }
+  
+  .album__canciones::-webkit-scrollbar-track {
+    background: var(--color-primary); /* Color de fondo del track */
+  }
+  
+  .album__canciones::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb (barra deslizadora) */
+    border-radius: 6px; /* Radio de borde del thumb */
+  }
+  
+  .album__canciones::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cambio de color al pasar el mouse sobre el thumb */
+  }
+  
+
+.album__canciones{
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    border: 1px solid red;
+    overflow-y: scroll;
+    gap: 0.5rem;    
+    padding: 0.5rem;
+
+
+}
+
+.album__total__youmay{
+    padding: 0.5rem ;
+    border-radius: 1rem;
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll; */
+    border: 1px solid red;
+    background-color: var(--color-tercer);
+
+}
+.album__youmay{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    background-color: var(--color-tercer);
+}
+
+.canciones__youmay{
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    border: 1px solid red;
+    overflow-y: scroll;
+    gap: 0.5rem;    
+    padding: 0.5rem;
+}
