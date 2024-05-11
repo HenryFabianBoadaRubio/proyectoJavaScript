@@ -19,13 +19,18 @@ aside{
     display: grid;
     padding: 0.5rem;
     gap: 0.5rem;
-    grid-template-rows: 1fr 2fr 2fr;
+    /* grid-template-rows: 1fr 2fr 2fr; */
 }
 .titulo{
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
     font-size: 1.3rem;
+    justify-content: space-between;
     padding: 1.5rem;
     color: white;
     background-color: var(--color-tercer);
+    /* border: 1px solid red; */
     /* margin-top: 0.5rem; */
     border-radius: 1rem;
     /* margin-left: 0.5rem; */
@@ -69,7 +74,7 @@ aside{
 .album__galeria{
     display: flex;
     flex-direction: column;
-
+    height: 40vh;
     padding: 1rem ;
     border-radius: 1rem;
     /* overflow-y: scroll; */
@@ -132,6 +137,8 @@ aside{
 
 .album__total__youmay{
     display: flex;
+    height: 36.7vh;
+    /* height: 40vh; */
     padding: 1rem ;
     flex-direction: column;
     border-radius: 1rem;
@@ -145,7 +152,7 @@ aside{
 .album__youmay{
     display: flex;
     padding: 0.5rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: var(--color-tercer);
 }
 
@@ -266,3 +273,63 @@ aside{
     /* border: 1px solid blue; */
    
 }
+@media(width<800px){
+
+    html{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        grid-template-rows: 1fr;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+    }
+
+    .titulo{
+        font-size: 0.9rem;
+    }
+    .contenedor__derecho,
+    .contenedor__medio,
+    .contenedor__izquierdo{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        scroll-snap-align: center;
+      
+    }
+   aside{
+    display: flex;
+    height: 80vh;
+   }
+
+}
+/* @media screen and (max-width: 768px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        grid-template-rows: 1rf;
+    }
+    .contenedor__derecho,
+    .contenedor__medio,
+    .contenedor__izquierdo{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-type: mandatory;
+        flex-direction: column;
+      
+    }
+   aside{
+    display: flex;
+    height: 80vh;
+   }
+   
+} */
