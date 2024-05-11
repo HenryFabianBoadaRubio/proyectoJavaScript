@@ -18,3 +18,14 @@ class myframe extends HTMLElement{
     }
 }
 customElements.define("my-frame",myframe)
+// import {getAllTopChart} from "./modules/top-chart.js"
+
+let buscadores = document.querySelectorAll ("input")
+
+buscadores[0].addEventListener("keyup", function(event){
+    if (event.key == "Enter") {
+        
+
+    }
+    // TARGET -> OBJETIVO
+})
