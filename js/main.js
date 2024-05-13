@@ -1,3 +1,4 @@
+/*ESTO ES EL DEL PROFESOR*/
 // class myframe extends HTMLElement{
 //     id
 //     constructor(id){
@@ -22,7 +23,8 @@
 
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**********************************************************************************************************************/
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /*ESTA PARTE SI FUNCIONA!*/
 // let cancionContainer = document.querySelector(".album__canciones");
@@ -52,6 +54,10 @@
 /*ESTA PARTE SI FUNCIONA!*/
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**********************************************************************************************************************/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**********************************************************************************************************************/
 
 let cancionContainer = document.querySelector(".album__canciones");
 
@@ -101,3 +107,33 @@ buscadores[0].addEventListener("keyup", async function(event) {
         console.log(canciones);
     }
 });
+
+
+
+
+/*PARTE DERECHA DE LA WEB*/
+
+let cancionesContainer = document.querySelector(".pistas__totales");
+
+// import {getAllTopChart} from  "./modules/now-playing.js"
+import {getAllListTracks} from "./modules/track.list.js"
+
+let buscador = document.querySelectorAll ("input")
+
+buscador[2].addEventListener("keyup", async function(event) {
+    if (event.key == "Enter") {
+        cancionesContainer.innerHTML="";
+        const query = event.target.value; // Obtener el valor del campo de búsqueda
+        const playlists = await getAllListTracks(query);
+        for (let playlist of playlists){
+             let idAlbum = playlist.split(":")[2];
+            cancionesContainer.innerHTML+= `
+            <div class="iframe-wrapper"> 
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+            `;
+        }
+        console.log(playlists);
+    }
+});
+/*FIN PARTE DERECHA DE LA WEB*/
