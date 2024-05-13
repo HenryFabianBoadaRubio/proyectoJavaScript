@@ -59,54 +59,55 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**********************************************************************************************************************/
 
-let cancionContainer = document.querySelector(".album__canciones");
+// let cancionContainer = document.querySelector(".album__canciones");
+// let youMyLike = document.querySelector(".canciones__youmay");
 
-// Array de álbumes predeterminados (puedes agregar más según tus necesidades)
-const albumesPredeterminados = [
-    "34jqKGS3XSMznpvtCwh9so",
-    "5w4BxSdTSlYUQcVRSa8Nxq",
-    "0fSaofDMk7H5ZUJ98SH5Uu",
-    "7ot6ebVthlYG3wXzLaZ5NF",
+// // Array de álbumes predeterminados (puedes agregar más según tus necesidades)
+// const albumesPredeterminados = [
+//     "34jqKGS3XSMznpvtCwh9so",
+//     "5w4BxSdTSlYUQcVRSa8Nxq",
+//     "0fSaofDMk7H5ZUJ98SH5Uu",
+//     "7ot6ebVthlYG3wXzLaZ5NF",
 
-];
+// ];
 
-// Mostrar los álbumes predeterminados inicialmente
-albumesPredeterminados.forEach(idAlbum => {
-    cancionContainer.innerHTML += `
-        <div class="iframe-wrapper">
-            <iframe  style="border-radius:12px" src="https://open.spotify.com/embed/album/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div> 
-    `;
-});
+// // Mostrar los álbumes predeterminados inicialmente
+// albumesPredeterminados.forEach(idAlbum => {
+//     cancionContainer.innerHTML += `
+//         <div class="iframe-wrapper">
+//             <iframe  style="border-radius:12px" src="https://open.spotify.com/embed/album/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+//         </div> 
+//     `;
+// });
 
-// import {getAllTopChart} from  "./modules/now-playing.js"
-import {getAllTopChart} from "./modules/top-chart.js"
+// // import {getAllTopChart} from  "./modules/now-playing.js"
+// import {getAllTopChart} from "./modules/top-chart.js"
 
-let buscadores = document.querySelectorAll ("input")
+// let buscadores = document.querySelectorAll ("input")
 
-buscadores[0].addEventListener("keyup", async function(event) {
-    if (event.key == "Enter") {
-        cancionContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevos resultados
+// buscadores[0].addEventListener("keyup", async function(event) {
+//     if (event.key == "Enter") {
+//         cancionContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevos resultados
 
-        const query = event.target.value; // Obtener el valor del campo de búsqueda
-        const canciones = await getAllTopChart(query);
+//         const query = event.target.value; // Obtener el valor del campo de búsqueda
+//         const canciones = await getAllTopChart(query);
 
-        if (canciones.length === 0) {
-            // Mostrar un mensaje si no se encontraron canciones
-            cancionContainer.innerHTML = "<p>No se encontraron resultados</p>";
-        } else {
-            for (let cancion of canciones){
-                let idAlbum = cancion.split(":")[2];
-                cancionContainer.innerHTML += `
-                <div class="iframe-wrapper">
-                    <iframe  style="border-radius:12px" src="https://open.spotify.com/embed/album/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div> 
-                `;
-            }
-        }
-        console.log(canciones);
-    }
-});
+//         if (canciones.length === 0) {
+//             // Mostrar un mensaje si no se encontraron canciones
+//             cancionContainer.innerHTML = "<p>No se encontraron resultados</p>";
+//         } else {
+//             for (let cancion of canciones){
+//                 let idAlbum = cancion.split(":")[2];
+//                 cancionContainer.innerHTML += `
+//                 <div class="iframe-wrapper">
+//                     <iframe  style="border-radius:12px" src="https://open.spotify.com/embed/album/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+//                 </div> 
+//                 `;
+//             }
+//         }
+//         console.log(canciones);
+//     }
+// });
 
 
 
