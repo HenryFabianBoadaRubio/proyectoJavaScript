@@ -450,4 +450,91 @@ aside{
 
 
 
-/**/
+/*modo claro y oscuro*/
+.switch {
+    width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 100px;
+    border: #333 solid 2px;
+    background-color: #132b41;
+}
+.switch i {
+    font-size: 1rem;
+    color: #fdc21c;
+}
+
+.pistas__titulo li::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid thin #000;
+    left: 0;
+    right: unset;
+}
+.pistas__titulo li.active::before {
+    right: 0;
+    left: unset;
+    border: solid thin #fff;
+}
+.pistas__titulo li.active i:first-child {
+    color: #fff;
+}
+.pistas__titulo li.active {
+    background-color: chocolate;
+    border: solid 2px #fff;
+}
+body.active nav {
+    background-color: #313131;
+}
+
+body.active nav ul {
+    background-color: #313131;
+}
+
+body.active nav ul li a {
+    color:#cfcfcf;
+}
+
+body.active .header__info {
+    background-color: #2c2c2c;
+}
+
+body.active h1 {
+    color: #fdc21c;
+}
+
+body.active .descripcion {
+    color: #cfcfcf;
+}
+
+body.active main section:first-child {
+    background-color: #313131;
+}
+
+body.active main section:first-child article h2 {
+    color: #fff;
+}
+
+body.active main section:first-child article p {
+    color: #bdbdbd;
+}
+
+body.active main section:nth-child(2) {
+    background-color: #2c2c2c;
+}
+
+body.active main section:nth-child(2) h2 {
+    color: #fff;
+}
+
+body.active main section:nth-child(2) > p{
+    color: #bdbdbd;
+}
