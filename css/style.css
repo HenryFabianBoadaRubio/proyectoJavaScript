@@ -465,7 +465,7 @@ aside{
 }
 .switch i {
     font-size: 1rem;
-    color: #fdc21c;
+    color:var(--color-tercer);
 }
 
 .pistas__titulo li::before {
@@ -488,53 +488,45 @@ aside{
     color: #fff;
 }
 .pistas__titulo li.active {
-    background-color: chocolate;
+    background-color:var(--color-secundary);
     border: solid 2px #fff;
 }
-body.active nav {
-    background-color: #313131;
-}
 
-body.active nav ul {
-    background-color: #313131;
+body.active {
+    background-color: var(--color-secundary);
 }
-
-body.active nav ul li a {
-    color:#cfcfcf;
-}
-
-body.active .header__info {
-    background-color: #2c2c2c;
-}
-
-body.active h1 {
-    color: #fdc21c;
-}
-
-body.active .descripcion {
-    color: #cfcfcf;
-}
-
 body.active main section:first-child {
-    background-color: #313131;
+    background-color:var(--color-secundary);
 }
 
-body.active main section:first-child article h2 {
-    color: #fff;
+body.active h3,
+body.active h1{
+    color: black;
+
 }
 
-body.active main section:first-child article p {
-    color: #bdbdbd;
+
+body.active .album__galeria,
+body.active .album__canciones,
+body.active .album__total__youmay,
+body.active .album__youmay,
+body.active .album__total,
+body.active .titulo__main,
+body.active .album__main__reproductor,
+body.active .pistas__titulo,
+body.active .reproductor__titulo,
+body.active .pistas__reproductor,
+
+body.active .titulo{
+    background-color: white;
 }
 
-body.active main section:nth-child(2) {
-    background-color: #2c2c2c;
-}
 
-body.active main section:nth-child(2) h2 {
-    color: #fff;
-}
 
-body.active main section:nth-child(2) > p{
-    color: #bdbdbd;
-}
+
+
+
+
+
+
+
