@@ -30,6 +30,7 @@ aside{
     padding: 1.5rem;
     color: white;
     background-color: var(--color-tercer);
+    line-height: 1.8rem;
     /* border: 1px solid red; */
     /* margin-top: 0.5rem; */
     border-radius: 1rem;
@@ -37,7 +38,7 @@ aside{
 
 }
 .buscador__album{
-    margin-top: 1rem;
+    margin-top: 0.2rem;
     display: flex;
     position: relative;
     /* border: 1px solid red; */
@@ -151,7 +152,7 @@ aside{
 
 .album__total__youmay{
     display: flex;
-    height: 36.7vh;
+    height: 35vh;
     /* height: 40vh; */
     padding: 1rem ;
     flex-direction: column;
@@ -483,7 +484,7 @@ aside{
     height: 1.4rem;
     width: 1.5rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--color-secundary);
     border: solid thin #000;
     left: 0;
     right: unset;
@@ -491,7 +492,9 @@ aside{
 .pistas__titulo li.active::before {
     right: 0;
     left: unset;
-    border: solid thin #fff;
+    /* background-color:rgb(175, 174, 174); */
+
+    border: solid thin black;
 }
 .pistas__titulo li.active i:first-child {
     color: #fff;
@@ -502,19 +505,23 @@ aside{
 }
 
 body.active {
-    background-color:black;
+    background-color: #000;
+    /* background-color:rgb(175, 174, 174); */
 }
 body.active main section:first-child {
-    background-color:black;
+    background-color: #000;
+
+    /* background-color:rgb(175, 174, 174); */
 }
 
 body.active h3,
 body.active h1{
-    color: var(--color-secundary);
+    color: var(--color-tercer);
 
 }
 
-
+body.active .pistas__totales,
+body.active .canciones__youmay,
 body.active .album__galeria,
 body.active .album__canciones,
 body.active .album__total__youmay,
@@ -528,14 +535,37 @@ body.active .pistas__reproductor,
 
 body.active .titulo{
     background-color: white;
+    border: 2px solid #333;
+    box-shadow:  /* Borde de neon verde */0 0 7px #00ff00;
+    
+}
+
+
+body.active .reproductor__titulo,
+body.active .album__youmay,
+body.active .album__total{
+    border: white;
+    box-shadow: none;
+    
+}
+
+
+/*parte de buscadores personalizados*/
+
+body.active .buscador__main,
+body.active .buscador{
+    
+    background-color: rgb(175, 174, 174);
 }
 
 
 
+body.active .buscador__album i{
+    color: #fff;
+}
 
-
-
-
-
-
-
+body.active .pistas__totales,
+body.active .album__canciones,
+body.active .canciones__youmay{
+ overflow-y: hidden;
+}
