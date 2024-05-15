@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/modules/dark_light.js" type="module"></script>
     <script src="./js/main.js" type="module" defer></script>
+    <script src="./js/modules/preloader.js" type="module"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="preloader">
+        <div class="loading-background"></div>
+        <div class="preloader-content">
+            <img src="/storage/img/spotify_logo.webp" class="preloader-image">
+            <button id="loadButton" class="spotify-button">Cargar Página</button>
+        </div>
+    </div>
     <aside id="1" class="contenedor__izquierdo">
         <div class="titulo">
             <h1>Discover <br> New menu</h1>

@@ -138,3 +138,60 @@
 //     }
 // });
 /*FIN PARTE DERECHA DE LA WEB*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**********************************************************************************************************************/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**********************************************************************************************************************/
+
+// // Obtener una referencia al contenedor de canciones
+// let cancionesContainer = document.querySelector(".pistas__totales");
+
+// // Importar la función para obtener todas las pistas de la lista
+// import { getAllListTracks } from "./modules/track.list.js";
+
+// // Función para mostrar canciones predeterminadas
+// async function mostrarCancionesPredeterminadas() {
+//     // Lista de IDs de canciones predeterminadas
+//     const cancionesPredeterminadas = ["0IPD4hNAGIjVDBTHfVdv8o", "65DUocb3eZpJHN5AsVgKmT", "2OQJLR0GbgHXq2GG7lEaqr"]; // Reemplaza con tus IDs reales
+
+//     // Mostrar las canciones predeterminadas en el contenedor
+//     for (let idAlbum of cancionesPredeterminadas) {
+//         cancionesContainer.innerHTML += `
+//             <div class="iframe-wrapper">
+//                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+//             </div>
+//         `;
+//     }
+// }
+
+// // Llamar a la función para mostrar canciones predeterminadas cuando la página se cargue
+// document.addEventListener("DOMContentLoaded", async function() {
+//     await mostrarCancionesPredeterminadas();
+// });
+
+// // Obtener referencias a los campos de búsqueda
+// let buscador = document.querySelectorAll("input");
+
+// // Agregar un event listener para el campo de búsqueda
+// buscador[2].addEventListener("keyup", async function(event) {
+//     if (event.key === "Enter") {
+//         cancionesContainer.innerHTML = ""; // Limpiar el contenedor de canciones
+
+//         // Obtener el valor del campo de búsqueda
+//         const query = event.target.value;
+
+//         // Obtener las pistas de la lista basadas en la búsqueda
+//         const playlists = await getAllListTracks(query);
+
+//         // Mostrar las pistas obtenidas en el contenedor
+//         for (let playlist of playlists) {
+//             let idAlbum = playlist.split(":")[2];
+//             cancionesContainer.innerHTML += `
+//                 <div class="iframe-wrapper">
+//                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${idAlbum}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+//                 </div>
+//             `;
+//         }
+//         console.log(playlists);
+//     }
+// });

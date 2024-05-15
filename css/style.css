@@ -536,7 +536,7 @@ body.active .pistas__reproductor,
 body.active .titulo{
     background-color: white;
     border: 2px solid #333;
-    box-shadow:  /* Borde de neon verde */0 0 7px #00ff00;
+    box-shadow:  /* Borde de neon verde */0 0 5px #00ff00;
     
 }
 
@@ -568,4 +568,118 @@ body.active .pistas__totales,
 body.active .album__canciones,
 body.active .canciones__youmay{
  overflow-y: hidden;
+}
+
+
+/**preloader//* styles.css */
+/* styles.css */
+/* styles.css */
+/* .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Fondo del preloader 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* Asegura que el preloader esté por encima de todo 
+}
+
+.preloader-image {
+    max-width: 30rem; /* Ajusta el tamaño de la imagen según tus necesidades 
+}
+
+.content {
+    display: none; /* Oculta el contenido hasta que se haga clic en el botón 
+}
+
+.hide-preloader {
+    display: none; /* Oculta el preloader cuando se muestra el contenido 
+}
+.spotify-button {
+    background-color: #1DB954; /* Color de fondo similar al de Spotify 
+    color: black; /* Color del texto 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px; /* Bordes redondeados 
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave 
+}
+
+.spotify-button:hover {
+    background-color: #1ED760; /* Cambio de color al pasar el mouse 
+} */
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0; /* Elimina el margen por defecto del cuerpo */
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1DB954; /* Color de fondo similar al de Spotify */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loading-background {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-size: 200% 200%;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% -100%;
+    }
+}
+
+.preloader-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.preloader-image {
+    max-width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.spotify-button {
+    background-color: #fff; /* Color de fondo similar al de Spotify */
+    color: #1DB954; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.spotify-button:hover {
+    background-color: #f3f3f3; /* Cambio de color al pasar el mouse */
+}
+
+.content {
+    display: none; /* Oculta el contenido hasta que se haga clic en el botón */
+}
+
+.hide-preloader {
+    display: none; /* Oculta el preloader cuando se muestra el contenido */
 }
