@@ -520,10 +520,10 @@ body.active h1{
 
 }
 
-body.active .pistas__totales,
-body.active .canciones__youmay,
+/* body.active .pistas__totales, */
+/* body.active .canciones__youmay, */
 body.active .album__galeria,
-body.active .album__canciones,
+/* body.active .album__canciones, */
 body.active .album__total__youmay,
 body.active .album__youmay,
 body.active .album__total,
@@ -535,7 +535,7 @@ body.active .pistas__reproductor,
 
 body.active .titulo{
     background-color: white;
-    border: 2px solid #333;
+    /* border: 2px solid #333; */
     box-shadow:  /* Borde de neon verde */0 0 5px #00ff00;
     
 }
@@ -564,11 +564,11 @@ body.active .buscador__album i{
     color: #fff;
 }
 
-body.active .pistas__totales,
+/* body.active .pistas__totales,
 body.active .album__canciones,
 body.active .canciones__youmay{
  overflow-y: hidden;
-}
+} */
 
 
 /* *BARRA DE CARGA */
@@ -636,5 +636,28 @@ body.active .canciones__youmay{
     }
     100% {
         width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .preloader {
+        flex-direction: column; /* Cambia la dirección del eje principal a vertical */
+    }
+
+    .preloader-image {
+        max-width: 20rem; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
+        order: 1; /* Cambia el orden de la imagen para que aparezca después del botón */
+        margin: 1rem; /* Agrega un margen para centrar la imagen horizontalmente */
+    }
+
+    .spotify-button {
+        display: flex;
+        order: -1; /* Cambia el orden del botón para que aparezca antes de la imagen */
+        margin: 1rem; /* Agrega un margen para centrar el botón horizontalmente */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .progress-bar {
+        margin-top: 1rem; /* Ajusta el margen superior de la barra de carga */
     }
 }
