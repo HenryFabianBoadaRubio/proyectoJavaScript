@@ -60,7 +60,7 @@
 /**********************************************************************************************************************/
 //parte izquieda chart
 let cancionContainer = document.querySelector(".album__canciones");
-let youMyLike = document.querySelector(".canciones__youmay");
+
 
 // Array de álbumes predeterminados (puedes agregar más según tus necesidades)
 const albumesPredeterminados = [
@@ -198,4 +198,53 @@ buscador[2].addEventListener("keyup", async function(event) {
 
 
 
-//PARTE IZQUIEDA INFEROR YOUMAY
+///parte medio 
+import { allGetTrack } from "./modules/now-playing.js";
+
+let unicancionContainer = document.querySelector(".album__main__reproductor");
+
+// Obtener referencia al campo de búsqueda
+let buscadorr = document.querySelectorAll("input")[1]; // Asumiendo que es el tercer input
+
+// Agregar un event listener para el campo de búsqueda
+buscadorr.addEventListener("keyup", async function(event) {
+    if (event.key === "Enter") {
+        unicancionContainer.innerHTML = ""; // Limpiar el contenedor de canciones
+
+        // Obtener el valor del campo de búsqueda
+        const query = event.target.value;
+
+        // Obtener la pista basada en la búsqueda
+        const cancionUri = await allGetTrack(query);
+
+        if (cancionUri) {
+            // Extraer el ID de la canción de la URI
+            let idCancion = cancionUri.split(":")[2];
+
+            // Mostrar la pista obtenida en el contenedor
+            unicancionContainer.innerHTML = `
+                <div class="iframe-wrapper">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${idCancion}" width="350" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            `;
+            console.log(cancionUri);
+        } else {
+            unicancionContainer.innerHTML = "<p>No se encontraron resultados</p>";
+        }
+    }
+});
+
+// Cargar una canción predeterminada cuando la página se cargue
+window.addEventListener("DOMContentLoaded", async function() {
+    // Obtener la URI de la canción predeterminada (reemplaza 'uri_cancion_predeterminada' con la URI real)
+    const uriCancionPredeterminada = 'spotify:trac123456789k:2q7DY7bBua9e9Aygmz8XmB'; // URI de la canción predeterminada
+    // Extraer el ID de la canción predeterminada de la URI
+    const idCancionPredeterminada = uriCancionPredeterminada.split(":")[2];
+
+    // Mostrar la canción predeterminada en el contenedor
+    unicancionContainer.innerHTML = `
+        <div class="iframe-wrapper">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${idCancionPredeterminada}" width="350" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    `;
+});
