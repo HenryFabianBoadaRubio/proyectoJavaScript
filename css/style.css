@@ -539,6 +539,7 @@ body.active .album__main__reproductor,
 body.active .pistas__titulo,
 body.active .reproductor__titulo,
 body.active .pistas__reproductor,
+body.active .main__medio,
 
 body.active .titulo{
     background-color: white;
