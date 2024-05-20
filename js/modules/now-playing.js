@@ -16,9 +16,6 @@ export const allGetTrack  =async (query)=> {
         let cancion=result.tracks.items[0].data.uri;
         return cancion;
 
-
-
-
     } catch (error) {
         console.error(error);
     }

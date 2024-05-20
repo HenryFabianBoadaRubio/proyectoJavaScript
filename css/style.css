@@ -32,9 +32,7 @@ aside{
     background-color: var(--color-tercer);
     line-height: 1.8rem;
     /* border: 1px solid red; */
-    /* margin-top: 0.5rem; */
     border-radius: 1rem;
-    /* margin-left: 0.5rem; */
 
 }
 .buscador__album{
@@ -44,8 +42,6 @@ aside{
     /* border: 1px solid red; */
     align-items: center;
     font-weight: normal;
-    
-    
 }
 
 .buscador__album i{
@@ -79,13 +75,8 @@ aside{
     height: 40vh;
     padding: 1rem ;
     border-radius: 1rem;
-    /* overflow-y: scroll; */
     background-color: var(--color-tercer);
-    /* margin-top: 0.5rem;
-    margin-left: 0.5rem; */
     /* border: 1px solid red; */
-
-
 }
 .album__total{
     display: flex;
@@ -119,31 +110,23 @@ aside{
     background: #555; /* Cambio de color al pasar el mouse sobre el thumb */
   }
   
-
-  
-
 .album__canciones{
     display:flex;
     flex-direction: column;
     height: 290px;
-    /* flex-wrap: wrap; */
     /* border: 1px solid red; */
     overflow-y: scroll;
     gap: 0.5rem;    
     border-radius: 1rem;
     padding: 0 0.5rem;
     
-
-
 }
 
 /*Genero el hover para las cancioenes de la web*/
 .iframe-wrapper {
-    /* overflow: hidden; */
     border-radius: 12px;
     transition: transform 0.3s ease-in-out;
     /* border: 1px solid red; */
-
 }
 
 .iframe-wrapper:hover {
@@ -154,21 +137,15 @@ aside{
 .album__total__youmay{
     display: flex;
     height: 35vh;
-    /* height: 40vh; */
     padding: 1rem ;
     flex-direction: column;
     border-radius: 1rem;
-    /* overflow-y: scroll; */
-    /* margin-top: 0.5rem; */
     background-color: var(--color-tercer);
     /* border: 1px solid red; */
-    /* margin-left: 0.5rem; */
-    
 }
 .album__youmay{
     display: flex;
     padding: 0.5rem;
-    /* justify-content: space-between; */
     background-color: var(--color-tercer);
 }
 
@@ -176,14 +153,11 @@ aside{
     display:flex;
     flex-direction: column;
     height: 290px;
-  
     border-radius: 1rem;
-    /* flex-wrap: wrap; */
     /* border: 1px solid red; */
     overflow-y: scroll;
     gap: 0.5rem;    
     padding: 0 0.5rem;
-    
 }
 .main__reproductor{
     display: flex;
@@ -191,22 +165,18 @@ aside{
     height: 100%;
     gap: 0.5rem;
     /* border: 1px solid red; */
-
     padding: 0.5rem 0;
-    /* background-color: var(--color-primary); */
 }
 .titulo__main{
     display: flex;
     width: 100%;
     height: 10%;
     font-family: sans-serif;
-
     align-items: center;
     justify-content: center;
     background-color: var(--color-tercer);
     border-radius: 1rem;
     /* border: 1px solid red; */
-    
 }
 .main__medio{
 
@@ -229,7 +199,6 @@ aside{
 .buscador__main{
     background-color: #242424;
     border: 0;
-    /* position: absolute; */
     border-radius: 500px;
     color: #fff !important;
     height: 30px;
@@ -242,7 +211,6 @@ aside{
 /**MEENUUUUUU*/
 .menu{
     display: none;
-    /* display: flex; */
     inset: 0;
     margin: auto;
     background: #242424;
@@ -254,10 +222,9 @@ aside{
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     /* border: 1px solid red; */
+}
 
-
-    
-}.menu ul{
+.menu ul{
     width: 100%;
     height: 40px;
     display: flex;
@@ -282,9 +249,6 @@ aside{
     transition: color .3s ease-in-out;
     /* border: 1px solid white; */
 }
-
-
-
 /*fin menu*/
 
 .album__pistas{
@@ -295,8 +259,6 @@ aside{
     height: 100vh;
     gap: 0.5rem;    
     padding: 0.5rem;
-
-
 }
 
 .pistas__titulo{
@@ -310,9 +272,7 @@ aside{
     background-color: var(--color-tercer);
     /* border: 1px solid blue; */
     border-radius: 1rem;
-
     position: relative;   /*para el switch*/
-
 }
 
 .pistas__reproductor{
@@ -323,13 +283,10 @@ aside{
     flex-direction: column;
     /* border: 1px solid yellowgreen; */
     padding: 1rem ;
-
-    
 }
 .reproductor__titulo{
     display: flex;
     /* border: 1px solid blue; */
-
     padding: 0.5rem;
     gap: 0.5rem;
 }
@@ -339,7 +296,6 @@ aside{
     border-radius: 1rem;
     height: 93.4%;
     overflow-y: scroll;
-    
     padding: 0 0.5rem;
     /* border: 1px solid blue; */
    
@@ -353,8 +309,6 @@ aside{
         
     }
     body{
-        /* position: relative; */
-        
         width: 100%;
         height: 100vh;
         overflow: hidden;
@@ -381,12 +335,6 @@ aside{
     display: flex;
     height: 80vh;
    }
-
-   /*posicionar elmenu donde va*/
-   /* .album__main__reproductor{
-    display: flex;
-    position: relative;
-   } */
    .menu{
     
     display: flex;
@@ -400,7 +348,6 @@ aside{
     border-top: 1px solid white;
     /* border: 1px solid red; */
 
- 
     }
     .menu ul{
         width: 100%;
@@ -433,31 +380,6 @@ aside{
 
     /*fin menu*/
 }
-/* @media screen and (max-width: 768px){
-
-    body{
-        width: 100%;
-        height: 100vh;
-        grid-template-rows: 1rf;
-    }
-    .contenedor__derecho,
-    .contenedor__medio,
-    .contenedor__izquierdo{
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        scroll-snap-type: mandatory;
-        flex-direction: column;
-      
-    }
-   aside{
-    display: flex;
-    height: 80vh;
-   }
-   
-} */
-
-
 
 /*modo claro y oscuro*/
 .boton__color {
@@ -500,7 +422,6 @@ aside{
     right: 0;
     left: unset;
     /* background-color:rgb(175, 174, 174); */
-
     border: solid thin black;
 }
 .pistas__titulo li.active i:first-child {
@@ -554,9 +475,7 @@ body.active .album__youmay,
 body.active .album__total{
     border: white;
     box-shadow: none;
-    
 }
-
 
 /*parte de buscadores personalizados*/
 
@@ -571,13 +490,6 @@ body.active .buscador{
 body.active .buscador__album i{
     color: #fff;
 }
-
-/* body.active .pistas__totales,
-body.active .album__canciones,
-body.active .canciones__youmay{
- overflow-y: hidden;
-} */
-
 
 /* *BARRA DE CARGA */
 
@@ -596,7 +508,7 @@ body.active .canciones__youmay{
 }
 
 .preloader-image {
-    max-width: 30rem; /* Ajusta el tamaño de la imagen según tus necesidades */
+    max-width: 30rem;
 }
 
 .content {
@@ -607,7 +519,7 @@ body.active .canciones__youmay{
     display: none; /* Oculta el preloader cuando se muestra el contenido */
 }
 .spotify-button {
-    background-color: #1DB954; /* Color de fondo similar al de Spotify */
+    background-color: #1DB954;
     color: black; 
     border: none;
     padding: 10px 20px;
@@ -618,9 +530,7 @@ body.active .canciones__youmay{
 }
 
 .spotify-button:hover {
-    background-color: #1ED760; } /* Cambio de color al pasar el mouse 
-} */
-
+    background-color: #1ED760; }
 
 .progress-bar {
     width: 50%;
@@ -648,24 +558,24 @@ body.active .canciones__youmay{
 }
 @media screen and (max-width: 768px) {
     .preloader {
-        flex-direction: column; /* Cambia la dirección del eje principal a vertical */
+        flex-direction: column;
     }
 
     .preloader-image {
-        max-width: 20rem; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
+        max-width: 20rem;
         order: 1; /* Cambia el orden de la imagen para que aparezca después del botón */
-        margin: 1rem; /* Agrega un margen para centrar la imagen horizontalmente */
+        margin: 1rem;
     }
 
     .spotify-button {
         display: flex;
         order: -1; /* Cambia el orden del botón para que aparezca antes de la imagen */
-        margin: 1rem; /* Agrega un margen para centrar el botón horizontalmente */
+        margin: 1rem;
         margin-left: auto;
         margin-right: auto;
     }
 
     .progress-bar {
-        margin-top: 1rem; /* Ajusta el margen superior de la barra de carga */
+        margin-top: 1rem;
     }
 }

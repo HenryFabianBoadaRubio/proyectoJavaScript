@@ -1,9 +1,6 @@
 
 
 export const getAllListTracks = async (query) => {
-
-
-
     const url = `https://spotify23.p.rapidapi.com/search/?q=${query}&type=tracks&offset=0&limit=7`;
     const options = {
         method: 'GET',
