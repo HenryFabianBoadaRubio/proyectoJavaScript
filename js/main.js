@@ -74,7 +74,7 @@ import {getAllTopChart} from "./modules/top-chart.js";
 let buscadores = document.querySelectorAll("input");
 
 buscadores[0].addEventListener("keyup", async function(event) {
-    if (event.key === "Enter") {
+    if (event.keyCode === 13) {
         cancionContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevos resultados
         youMayContainer.innerHTML = "";  // Limpiar el contenedor adicional
 
@@ -174,7 +174,7 @@ let buscador = document.querySelectorAll("input");
 
 // Agregar un event listener para el campo de búsqueda
 buscador[2].addEventListener("keyup", async function(event) {
-    if (event.key === "Enter") {
+    if (event.keyCode === 13) {
         cancionesContainer.innerHTML = ""; // Limpiar el contenedor de canciones
 
         // Obtener el valor del campo de búsqueda
@@ -213,7 +213,7 @@ let buscadorr = document.querySelectorAll("input")[1]; // Asumiendo que es el te
 
 // Agregar un event listener para el campo de búsqueda
 buscadorr.addEventListener("keyup", async function(event) {
-    if (event.key === "Enter") {
+    if (event.keyCode === 13) {
         unicancionContainer.innerHTML = ""; // Limpiar el contenedor de canciones
 
         // Obtener el valor del campo de búsqueda
